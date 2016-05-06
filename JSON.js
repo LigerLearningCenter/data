@@ -49,4 +49,4 @@ randomEvents[0].industry.RI027 = new Events("International investment in agro in
 randomEvents[0].industry.RI028 = new Events("Export of agro industry products increases", -0.06, 0.04, 0, 0, 0, 0, 0);
 randomEvents[0].industry.RI029 = new Events("Export of agro industry products decreases", 0.06, -0.04, 0, 0, 0, 0, 0);
 randomEvents[0].industry.RI030 = new Events("New health and safety at work regulations", -0.06, -0.02, 0, 0, 0.02, 0, 0);
-console.log(industry.RI01)
+console.log(randomEvents[0].industry.RI01)
