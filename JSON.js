@@ -18,7 +18,7 @@ var randomEvents = [{
     tourism: {},
     ecology: {}
 }];
-//industry part in industry sector
+//industry sector
 randomEvents[0].industry.RI01 = new Events("More jobs in clothing industry", 0.02, -0.02, 0.02, 0, 0, 0, 0);
 randomEvents[0].industry.RI02 = new Events("Layoffs in clothing industry", -0.02, 0, 0, 0, 0, 0, 0);
 randomEvents[0].industry.RI03 = new Events("Export of clothes increases", 0.06, 0, 0, 0, 0, 0, 0);
@@ -50,7 +50,7 @@ randomEvents[0].industry.RI028 = new Events("Export of agro industry products in
 randomEvents[0].industry.RI029 = new Events("Export of agro industry products decreases", 0.06, -0.04, 0, 0, 0, 0, 0);
 randomEvents[0].industry.RI030 = new Events("New health and safety at work regulations", -0.06, -0.02, 0, 0, 0.02, 0, 0);
 
-//agriculture part in agriculture sector
+//aagriculture sector
 randomEvents[0].agriculture.RI01 = new Events("Quality award for Cambodian rice", 0, 0.02, 0, 0, 0, 0, 0);
 randomEvents[0].agriculture.RI02 = new Events("Increase in rice export", 0, 0.04, 0, 0.02, 0, 0, 0);
 randomEvents[0].agriculture.RI03 = new Events("Decrease in rice export", 0, -0.04, 0, -0.02, 0, 0, 0);
