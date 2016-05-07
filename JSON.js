@@ -49,6 +49,7 @@ randomEvents[0].industry.RI027 = new Events("International investment in agro in
 randomEvents[0].industry.RI028 = new Events("Export of agro industry products increases", -0.06, 0.04, 0, 0, 0, 0, 0);
 randomEvents[0].industry.RI029 = new Events("Export of agro industry products decreases", 0.06, -0.04, 0, 0, 0, 0, 0);
 randomEvents[0].industry.RI030 = new Events("New health and safety at work regulations", -0.06, -0.02, 0, 0, 0.02, 0, 0);
+<<<<<<< HEAD
 
 randomEvents[0].agriculture.RI01 = new Events("Quality award for Cambodian rice",	0,	0.02,	0,	0,	0,	0,	0);
 randomEvents[0].agriculture.RI02 = new Events("Increase in rice export",	0,	0.04,	0,	0.02,	0,	0,	0);
@@ -81,3 +82,6 @@ randomEvents[0].agriculture.RI028 = new Events("Price of fish fall",	0,	-0.06,	0
 randomEvents[0].agriculture.RI029 = new Events("Local goverment supports fisheries",	0,	0.04,	0,	0,	0,	0,	0.02);
 randomEvents[0].agriculture.RI030 = new Events("Goverment supports fisheries",	0,	0.06,	0,	0,	0,	0,	0.04);
 console.log(randomEvents[0].agriculture.RI01)
+=======
+console.log(randomEvents[0].industry.RI01)
+>>>>>>> f0b4ec75305a9a553ea7b27497f0531d4d3b19d6
