@@ -1,5 +1,5 @@
-function Events (description, industry, agriculture, consumerServices, infrastructure, education, tourism, ecology) {
-    this.discription = description;
+function Events(description, industry, agriculture, consumerServices, infrastructure, education, tourism, ecology) {
+    this.description = description;
     this.industry = industry;
     this.agriculture = agriculture;
     this.consumerServices = consumerServices;
@@ -49,4 +49,35 @@ randomEvents[0].industry.RI027 = new Events("International investment in agro in
 randomEvents[0].industry.RI028 = new Events("Export of agro industry products increases", -0.06, 0.04, 0, 0, 0, 0, 0);
 randomEvents[0].industry.RI029 = new Events("Export of agro industry products decreases", 0.06, -0.04, 0, 0, 0, 0, 0);
 randomEvents[0].industry.RI030 = new Events("New health and safety at work regulations", -0.06, -0.02, 0, 0, 0.02, 0, 0);
-console.log(industry.RI01)
+
+randomEvents[0].agriculture.RI01 = new Events("Quality award for Cambodian rice",	0,	0.02,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI02 = new Events("Increase in rice export",	0,	0.04,	0,	0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI03 = new Events("Decrease in rice export",	0,	-0.04,	0,	-0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI04 = new Events("International investment in Cambodian rice fields",	0,	0.02,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI05 = new Events("Price of rice rises",	0,	0.04,	-0.02,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI06 = new Events("Price of rice falls",	0,	-0.04,	0.02,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI07 = new Events("Quality award for Cambodian rubber",	0,	0.02,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI08 = new Events("Increase in rubber export",	0,	0.04,	0,	0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI09 = new Events("Decrease in rubber export",	0,	-0.04,	0,	-0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI010 = new Events("International investment in Cambodian rubber",	0,	0.02,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI011 = new Events("Price of rubber rises",	-0.02,	0.04,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI012 = new Events("Price of rubber falls",	0.02,	-0.04,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI013 = new Events("Quality award for Cambodian cassava",	0,	0.02,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI014 = new Events("Increase in cassava export",	0,	0.04,	0,	0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI015 = new Events("Decrease in cassava export",	0,	-0.04,	0,	-0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI016 = new Events("International investment in Cambodian cassava",	0,	0.02,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI017 = new Events("Price of cassava rises",	0,	0.04,	-0.02,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI018 = new Events("Price of cassava falls",	0,	-0.04,	0.02,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI019 = new Events("Quality award for Cambodian pepper",	0,	0.02,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI020 = new Events("Increase in pepper export",	0,	0.04,	0,	0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI021 = new Events("Decrease in pepper export",	0,	-0.04,	0,	-0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI022 = new Events("Quality award for Cambodian palm sugar",	0,	0.02,	0,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI023 = new Events("Increase in palm sugar export",	0,	0.04,	0,	0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI024 = new Events("Decrease in palm sugar export",	0,	-0.04,	0,	-0.02,	0,	0,	0);
+randomEvents[0].agriculture.RI025 = new Events("Price of palm sugar rises",	-0.02,	0.04,	-0.02,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI026 = new Events("Price of palm sugar falls",	0.02,	-0.04,	0.02,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI027 = new Events("Price of fish rise",	0,	0.06,	-0.06,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI028 = new Events("Price of fish fall",	0,	-0.06,	0.06,	0,	0,	0,	0);
+randomEvents[0].agriculture.RI029 = new Events("Local goverment supports fisheries",	0,	0.04,	0,	0,	0,	0,	0.02);
+randomEvents[0].agriculture.RI030 = new Events("Goverment supports fisheries",	0,	0.06,	0,	0,	0,	0,	0.04);
+console.log(randomEvents[0].agriculture.RI01)
