@@ -50,7 +50,7 @@ randomEvents[0].ind.RI028 = new Events("Export of agro industry products increas
 randomEvents[0].ind.RI029 = new Events("Export of agro industry products decreases", 0.06, -0.04, 0, 0, 0, 0, 0);
 randomEvents[0].ind.RI030 = new Events("New health and safety at work regulations", -0.06, -0.02, 0, 0, 0.02, 0, 0);
 
-//aagriculture sector
+//agriculture sector
 randomEvents[0].agri.RI01 = new Events("Quality award for Cambodian rice", 0, 0.02, 0, 0, 0, 0, 0);
 randomEvents[0].agri.RI02 = new Events("Increase in rice export", 0, 0.04, 0, 0.02, 0, 0, 0);
 randomEvents[0].agri.RI03 = new Events("Decrease in rice export", 0, -0.04, 0, -0.02, 0, 0, 0);
