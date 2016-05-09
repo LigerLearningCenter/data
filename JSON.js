@@ -1,4 +1,4 @@
-sfunction Events(description, industry, agriculture, consumerServices, infrastructure, education, tourism, ecology) {
+function Events(description, industry, agriculture, consumerServices, infrastructure, education, tourism, ecology) {
     this.description = description;
     this.industry = industry;
     this.agriculture = agriculture;
