@@ -20,6 +20,16 @@ function Events(description, money, mood) {
     }
 
 }
+var randomEvents = [{
+    description: {},
+    industry: {},
+    agriculture: {},
+    consumerServices: {},
+    infrastructure: {},
+    education: {},
+    tourism: {},
+    ecology: {}
+}];
 randomEvents[0].eudcation.RED01("Local goverment supports primary schools " [0, 0, 0, 0, 0.02, 0, 0], [0, 0, 0, 0, 0, 0, 0]);
 randomEvents[0].eudcation.RED02("Goverment supports primary schools " [0, 0, 0, 0, 0.04, 0, 0], [0, 0, 0, 0, 1, 0, 0]);
 randomEvents[0].eudcation.RED03("International grant for primary schools " [0, 0, 0, 0, 0.06, 0, 0], [0, 0, 0, 0, 1, 0, 0]);
