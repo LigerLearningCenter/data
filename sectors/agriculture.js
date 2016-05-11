@@ -61,4 +61,3 @@ randomEvents[0].agriculture.RA27 = new Events("Prace of fish rase" [0, 0.06, -0.
 randomEvents[0].agriculture.RA28 = new Events("Prace of fish fall" [0, -0.06, 0.06, 0, 0, 0, 0], [0, -1, 0, 0, 0, 0, 0]);
 randomEvents[0].agriculture.RA29 = new Events("Local goverment supports fisheraes" [0, 0.04, 0, 0, 0, 0, 0.02], [0, 1, 0, 0, 0, 0, 0]);
 randomEvents[0].agriculture.RA30 = new Events("Goverment supports fisheraes" [0, 0.06, 0, 0, 0, 0, 0.04], [0, 1, 0, 0, 0, 0, 0]);
-console.log(randomEvents[0]) //print out the JSON format
