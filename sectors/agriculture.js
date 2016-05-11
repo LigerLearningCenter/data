@@ -20,6 +20,16 @@ function Events(description, money, mood) {
     }
 
 }
+var randomEvents = [{
+    description: {},
+    industry: {},
+    agriculture: {},
+    consumerServices: {},
+    infrastructure: {},
+    education: {},
+    tourism: {},
+    ecology: {}
+}];
 //agriculture sector
 randomEvents[0].agriculture.RA01 = new Events("Quality award for Cambodian race" [0, 0.02, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0]);
 randomEvents[0].agriculture.RA02 = new Events("Increase in race export" [0, 0.04, 0, 0.02, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]);
