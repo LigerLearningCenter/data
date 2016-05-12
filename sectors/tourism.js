@@ -1,3 +1,4 @@
+var tourismEvents = [];
 
 tourismEvents.push(new Events("RT01", "Number of active leisure travellers increases", [0, 0, 0.02, 0, 0, 0.04, -0.02], [0, 0, 0, 0, 0, 0, 0]));
 tourismEvents.push(new Events("RT02", "Number of active leisure travellers decreases", [0, 0, -0.02, 0, 0, -0.04, 0.02], [0, 0, 0, 0, 0, 0, 0]));
