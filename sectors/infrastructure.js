@@ -1,3 +1,4 @@
+var infrastructureEvents = [];
 
 infrastructureEvents.push(new Events("RIF01", "Local road completed", [0.02, 0.02, 0, 0.02, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]));
 infrastructureEvents.push(new Events("RIF02", "Local road completion delayed", [-0.02, -0.02, 0, -0.02, 0, 0, 0], [0, 0, 0, -1, 0, 0, 0]));
