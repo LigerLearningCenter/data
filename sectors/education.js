@@ -1,4 +1,4 @@
-  var educationEventsEvents = [];
+  var educationEvents = [];
 //education sector
 educationEvents.push(new Events("RED01", "Local goverment supports primary schools", [0, 0, 0, 0, 0.02, 0, 0], [0, 0, 0, 0, 0, 0, 0]));
 educationEvents.push(new Events("RED02", "Goverment supports primary schools", [0, 0, 0, 0, 0.04, 0, 0], [0, 0, 0, 0, 1, 0, 0]));
@@ -30,4 +30,3 @@ educationEvents.push(new Events("RED27", "Univerities overcrowded", [0, 0, 0, 0,
 educationEvents.push(new Events("RED28", "Universities staff on strike", [0, 0, 0, 0, -0.04, 0, 0], [0, 0, 0, 0, -1, 0, 0]));
 educationEvents.push(new Events("RED29", "Universities understaffed", [0, 0, 0, 0, -0.06, 0, 0], [0, 0, 0, 0, -1, 0, 0]));
 educationEvents.push(new Events("RED30", "Business supports technical education", [0.06, 0.04, 0, 0.06, 0.06, 0, 0], [1, 0, 0, 1, 1, 0, 0]));
->>>>>>> 4f7dd6cb044fa899e9e5bc3de899037d767b8ea2
