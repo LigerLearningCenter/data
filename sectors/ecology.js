@@ -1,4 +1,4 @@
-var ecology = [];
+var ecologyEvents = [];
 //ecology sector
 ecologyEvents.push(new Events("REC01", "Water pollution increases", [0, -0.04, -0.02, 0, 0, -0.04, -0.06], [0, -1, 0, 0, 0, 0, -1]));
 ecologyEvents.push(new Events("REC02", "Water pollution decreases", [0, 0.04, 0.02, 0, 0, 0.04, 0.06], [0, 1, 0, 0, 0, 0, 1]));
