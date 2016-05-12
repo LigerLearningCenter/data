@@ -1,4 +1,4 @@
-  var educationEvents = [];
+var educationEvents = [];
 //education sector
 educationEvents.push(new Events("RED01", "Local goverment supports primary schools", [0, 0, 0, 0, 0.02, 0, 0], [0, 0, 0, 0, 0, 0, 0]));
 educationEvents.push(new Events("RED02", "Goverment supports primary schools", [0, 0, 0, 0, 0.04, 0, 0], [0, 0, 0, 0, 1, 0, 0]));
