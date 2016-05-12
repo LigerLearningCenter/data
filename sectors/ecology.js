@@ -61,4 +61,3 @@ randomEvents[0].ecology.REC27 = new Events("National grant for wildlife research
 randomEvents[0].ecology.REC28 = new Events("International grant for wildlife research", [0, 0, 0, 0, 0.06, 0.02, 0.06], [0, 0, 0, 0, 1, 0, 1]);
 randomEvents[0].ecology.REC29 = new Events("National grant for marine wildlife research", [0, 0, 0, 0, 0.04, 0, 0.04], [0, 0, 0, 0, 1, 0, 1]);
 randomEvents[0].ecology.REC30 = new Events("International grant for marine wildlife research", [0, 0, 0, 0, 0.06, 0.02, 0.06], [0, 0, 0, 0, 1, 0, 1]);
-
