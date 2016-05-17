@@ -6,7 +6,7 @@ consumerServicesEvents.push(new Event("RCS03", "Gas prices rise", [-0.06, -0.02,
 consumerServicesEvents.push(new Event("RCS04", "Gas prices fall", [0.06, 0.02, 0.04, 0.06, 0, 0.02, -0.04], [1, 0, -1, 0, 0, 0, 0]));
 consumerServicesEvents.push(new Event("RCS05", "Prices of telecommunication services rise", [-0.02, 0, -0.04, 0, -0.02, 0, 0], [0, 0, -1, 0, 0, 0, 0]));
 consumerServicesEvents.push(new Event("RCS06", "Prices of telecommunication services fall", [0.02, 0, 0.04, 0, 0.02, 0, 0], [0, 0, 1, 0, 0, 0, 0]));
-consumerServicesEvents.push(new Event("RCS07", "Food and drinks prices rise", [0.02, 0.04, -0.06, 0, 0, -0.02, 0], [0, 1, -1, 0, 0, 0, 0]), );
+consumerServicesEvents.push(new Event("RCS07", "Food and drinks prices rise", [0.02, 0.04, -0.06, 0, 0, -0.02, 0], [0, 1, -1, 0, 0, 0, 0]));
 consumerServicesEvents.push(new Event("RCS08", "Food and drinks prices fall", [-0.02, -0.04, 0.06, 0, 0, 0.02, 0], [0, -1, 1, 0, 0, 0, 0]));
 consumerServicesEvents.push(new Event("RCS09", "Prices of medication and medical services rise", [0, 0, -0.04, 0, 0, -0.02, 0], [0, 0, -1, 0, 0, 0, 0]));
 consumerServicesEvents.push(new Event("RCS10", "Prices of medication and medical services fall", [0, 0, 0.04, 0, 0, 0.02, 0], [0, 0, 1, 0, 0, 0, 0]));
