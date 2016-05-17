@@ -10,7 +10,7 @@ ecologyEvents.push(new Event("REC07", "Longer rainy season", [0, 0.04, 0, -0.04,
 ecologyEvents.push(new Event("REC08", "Prolonged flooding", [-0.06, -0.06, 0, -0.06, -0.02, -0.06, 0.02], [0, -1, 0, -1, 0, -1, 0]));
 ecologyEvents.push(new Event("REC09", "Massive floods", [-0.06, -0.06, -0.06, -0.06, 0, -0.06, -0.06], [-1, -1, -1, -1, 0, -1, -1]));
 ecologyEvents.push(new Event("REC10", "Heatwave", [-0.04, -0.04, 0, -0.04, 0, 0.04, -0.02], [0, 0, 0, 0, 0, 1, 0]));
-ecologyEvents.push(new Event("REC11", "Drought", [-0.06, -0.06, -0.02, -0.06, -0.02, -0.02, -0.06], [-1, -1, 0, 0, 0, -1]));
+ecologyEvents.push(new Event("REC11", "Drought", [-0.06, -0.06, -0.02, -0.06, -0.02, -0.02, -0.06], [-1, -1, 0, -1, 0, 0, -1]));
 ecologyEvents.push(new Event("REC12", "Severe drought", [-0.06, -0.06, -0.06, -0.06, -0.06, -0.02, -0.06], [-1, -1, -1, -1, -1, 0, -1]));
 ecologyEvents.push(new Event("REC13", "Wildfire", [0,   -0.04, 0, -0.04, 0, -0.04, -0.04], [0, 0, 0, 0, 0, -1, -1]));
 ecologyEvents.push(new Event("REC14", "Massive wildfire", [0, -0.06, 0, -0.06, 0, -0.06, -0.06], [0, -1, 0, -1, 0, -1, -1]));
