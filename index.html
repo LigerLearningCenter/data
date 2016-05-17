@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <!-- libraries //-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css" charset="utf-8">
+    <!-- events //-->
+    <script src="js/sectors/event.js"></script>
+    <script src="js/sectors/ecology.js"></script>
+    <script src="js/sectors/industry.js"></script>
+    <script src="js/sectors/agriculture.js"></script>
+    <script src="js/sectors/education.js"></script>
+    <script src="js/sectors/consumer-services.js"></script>
+    <script src="js/sectors/tourism.js"></script>
+    <script src="js/sectors/infrastructure.js"></script>
+
+</head>
+
+<body>
+    <button class="button">Random Events</button>
+    <button class="button">Industry</button>
+    <button class="button">Agriculture</button>
+    <button class="button">Consumer Services</button>
+    <button class="button">Infrastructure</button>
+    <button class="button">Education</button>
+    <button class="button">Tourism</button>
+    <button class="button">Ecology</button>
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Money</th>
+            <th>Mood</th>
+        </tr>
+    </table>
+    <script type="javascript">
+        // use jQuery to generate table from events
+
+        $("table").append("<tr><td>" + ecologyEvents[10].id + "</td><td>" + ecologyEvents[10].description + "</td><td>" [0, 0.04, 0.02, 0, 0, 0.04, 0.06] "</td><td>" [0, 1, 0, 0, 0, 0, 1] "</td></tr>");
+    </script>
+</body>
+
+</html>

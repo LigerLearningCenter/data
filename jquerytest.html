@@ -1,0 +1,42 @@
+<html>
+<head>
+    <!-- libraries //-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js" ></script>
+
+    <!-- events //-->
+    <script src="js/events.js"></script>
+    <script src="js/ecology.js"></script>
+</head>
+<body>
+    <button>Show random event</button>
+    <h1>Ecology</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Money</th>
+            <th>Mood</th>
+        </tr>
+        <tr>
+            <td>REC01</td>
+            <td>Water pollution increases</td>
+            <td>[0, -0.04, -0.02, 0, 0, -0.04, -0.06]</td>
+            <td>[0, -1, 0, 0, 0, 0, -1]</td>
+        </tr>
+        <tr>
+            <td>REC02</td>
+            <td>Water pollution decreases</td>
+            <td>[0, 0.04, 0.02, 0, 0, 0.04, 0.06]</td>
+            <td>[0, 1, 0, 0, 0, 0, 1]</td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        // use jQuery to generate table from events
+
+        $("table").append("<tr><td>" + ecologyEvents[10].id + "</td><td>" + ecologyEvents[10].description + "</td><td>[0, 0.04, 0.02, 0, 0, 0.04, 0.06]</td><td>[0, 1, 0, 0, 0, 0, 1]</td></tr>")
+    </script>
+</body>
+</html>
