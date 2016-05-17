@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <!-- libraries //-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -15,9 +14,7 @@
     <script src="js/sectors/consumer-services.js"></script>
     <script src="js/sectors/tourism.js"></script>
     <script src="js/sectors/infrastructure.js"></script>
-
 </head>
-
 <body>
     <button class="button">Random Events</button>
     <button class="button">Industry</button>
@@ -35,11 +32,38 @@
             <th>Mood</th>
         </tr>
     </table>
-    <script type="javascript">
-        // use jQuery to generate table from events
+    <script type="text/javascript">
+        function tableRowFromEvent(event) {
+            return "<tr><td>" + event.id
+                + "</td><td>"
+                + event.description
+                + "</td><td>"
+                + [0, 0.04, 0.02, 0, 0, 0.04, 0.06] // TODO: use data from event
+                + "</td><td>"
+                + [0, 1, 0, 0, 0, 0, 1] // TODO: use data from event
+                + "</td></tr>";
+        }
 
-        $("table").append("<tr><td>" + ecologyEvents[10].id + "</td><td>" + ecologyEvents[10].description + "</td><td>" [0, 0.04, 0.02, 0, 0, 0.04, 0.06] "</td><td>" [0, 1, 0, 0, 0, 0, 1] "</td></tr>");
+        function tableHeaderFromTitles(columnTitles) {
+            // TODO: create header from array of column titles
+        }
+
+        function tableFromEvents(events) {
+            var table = $("<table class='table table-striped'></table>");
+            var tableHeader = tableHeaderFromTitles(["ID", "Description", "Money", "Mood"]);
+            table.append(tableHeader);
+            for (var i = 0; i < events.length; i++) {
+                var row = tableRowFromEvent(events[i]);
+                table.append(row);
+            }
+            return table;
+        }
+
+        $(document).ready(function() {
+            // TODO: make a loop over all event types
+            var ecologyTable = tableFromEvents(ecologyEvents);
+            $("body").append(ecologyTable);
+        });
     </script>
 </body>
-
 </html>
