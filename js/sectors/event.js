@@ -7,7 +7,7 @@ function Event(id, description, money, mood) {
         consumerServices: money[2],
         infrastructure: money[3],
         education: money[4],
-        tourism: money[5], 
+        tourism: money[5],
         ecology: money[6]
     }
     this.mood = {
