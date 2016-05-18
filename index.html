@@ -34,13 +34,38 @@
     </table>
     <script type="text/javascript">
         function tableRowFromEvent(event) {
-            return "<tr><td>" + event.id
+            return "<tr><td>"
+                + event.id
                 + "</td><td>"
                 + event.description
                 + "</td><td>"
-                + [0, 0.04, 0.02, 0, 0, 0.04, 0.06] // TODO: use data from event
+                + event.money.industry
+                + ", "
+                + event.money.agriculture
+                + ", "
+                + event.money.consumerServices
+                + ", "
+                + event.money.infrastructure
+                + ", "
+                + event.money.education
+                + ", "
+                + event.money.tourism
+                + ", "
+                + event.money.ecology // TODO: use data from event
                 + "</td><td>"
-                + [0, 1, 0, 0, 0, 0, 1] // TODO: use data from event
+                + event.mood.industry
+                + ", "
+                + event.mood.agriculture
+                + ", "
+                + event.mood.consumerServices
+                + ", "
+                + event.mood.infrastructure
+                + ", "
+                + event.mood.education
+                + ", "
+                + event.mood.tourism
+                + ", "
+                + event.mood.ecology // TODO: use data from event
                 + "</td></tr>";
         }
 
