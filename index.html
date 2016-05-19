@@ -32,16 +32,15 @@
                 + "</td><td>"
                 + event.description
                 + "</td><td>"
-                + [event.money.industry,event.money.agriculture,event.money.consumerServices,event.money.infrastructure,event.money.education,event.money.tourism,event.money.ecology] // TODO: use data from event
+                + [event.money.industry,event.money.agriculture,event.money.consumerServices,event.money.infrastructure,event.money.education,event.money.tourism,event.money.ecology]
                 + "</td><td>"
-                + [event.mood.industry,event.mood.agriculture,event.mood.consumerServices,event.mood.infrastructure,event.mood.education,event.mood.tourism,event.mood.ecology] // TODO: use data from event
+                + [event.mood.industry,event.mood.agriculture,event.mood.consumerServices,event.mood.infrastructure,event.mood.education,event.mood.tourism,event.mood.ecology]
                 + "</td></tr>";
         }
 
         function tableHeaderFromTitles(columnTitles) {
             var columnTitles = ["<th>ID</th>", "<th>Description</th>", "<th>Money</th>", "<th>Mood</th>"]
             return columnTitles;
-            // TODO: create header from array of column titles
         }
 
         function tableFromEvents(events) {
