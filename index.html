@@ -16,25 +16,44 @@
     <script src="js/sectors/infrastructure.js"></script>
 </head>
 <body>
-    <button class="button">Random Events</button>
-    <button class="button">Industry</button>
-    <button class="button">Agriculture</button>
-    <button class="button">Consumer Services</button>
-    <button class="button">Infrastructure</button>
-    <button class="button">Education</button>
-    <button class="button">Tourism</button>
-    <button class="button">Ecology</button>
+    <button class="button" id="all">All Events</button>
+    <button class="button" id="industry">Industry</button>
+    <button class="button" id="agriculture">Agriculture</button>
+    <button class="button" id="consumerServices">Consumer Services</button>
+    <button class="button" id="infrastructure">Infrastructure</button>
+    <button class="button" id="education">Education</button>
+    <button class="button" id="tourism">Tourism</button>
+    <button class="button" id="ecology">Ecology</button>
+    <button class="button">Random Event</button>
 
     <script type="text/javascript">
+    function displayEventsTable() {
+      var buttonId = $(this).attr("id");
+      var arrayOfEvents = events[buttonId];
+
+      $("#eventsTable").remove()
+      var eventsTable = tableFromEvents(arrayOfEvents);
+      $("body").append(eventsTable);
+    }
+    </script>
+    <script type="text/javascript">
+        function flatten(dictionary) {
+            var result = []
+            for (key in dictionary) {
+              result.push(dictionary[key]);
+            }
+            return result
+        }
+
         function tableRowFromEvent(event) {
             return "<tr><td>"
                 + event.id
                 + "</td><td>"
                 + event.description
                 + "</td><td>"
-                + [event.money.industry,event.money.agriculture,event.money.consumerServices,event.money.infrastructure,event.money.education,event.money.tourism,event.money.ecology]
+                + flatten(event.money)
                 + "</td><td>"
-                + [event.mood.industry,event.mood.agriculture,event.mood.consumerServices,event.mood.infrastructure,event.mood.education,event.mood.tourism,event.mood.ecology]
+                + flatten(event.mood)
                 + "</td></tr>";
         }
 
@@ -44,7 +63,7 @@
         }
 
         function tableFromEvents(events) {
-            var table = $("<table class='table table-striped'></table>");
+            var table = $("<table id='eventsTable' class='table table-striped'></table>");
             var tableHeader = tableHeaderFromTitles(["ID", "Description", "Money", "Mood"]);
             table.append(tableHeader);
             for (var i = 0; i < events.length; i++) {
@@ -53,11 +72,24 @@
             }
             return table;
         }
-        var allEvents = [];
-        allEvents = allEvents.concat(industryEvents,agricultureEvents,consumerServicesEvents,infrastructureEvents,tourismEvents,educationEvents,ecologyEvents)
+
+        var allEvents = [].concat(industryEvents,agricultureEvents,consumerServicesEvents,infrastructureEvents,tourismEvents,educationEvents,ecologyEvents)
+
+        var events = {
+          "all" : allEvents,
+          "industry" : industryEvents,
+          "agriculture" : agricultureEvents,
+          "consumerServices" : consumerServicesEvents,
+          "infrastructure" : infrastructureEvents,
+          "education" : educationEvents,
+          "tourism" : tourismEvents,
+          "ecology" : ecologyEvents
+        };
         $(document).ready(function() {
           var eventsTable = tableFromEvents(allEvents);
           $("body").append(eventsTable);
+
+          $("#all, #industry, #agriculture, #consumerServices, #infrastructure, #education, #tourism, #ecology").bind("click", displayEventsTable);
         });
     </script>
 </body>
