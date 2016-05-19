@@ -19,7 +19,7 @@ tourismEvents.push(new Event("RT16", "Regional markets crash", [-0.06, -0.06, -0
 tourismEvents.push(new Event("RT17", "Global markets rise", [0.06, 0.04, 0.04, 0.04, 0.04, 0.04, 0], [1, 1, 1, 0, 0, 1, 0]));
 tourismEvents.push(new Event("RT18", "Global markets boom", [0.06, 0.06, 0.06, 0.06, 0.06, 0.06, 0], [1, 1, 1, 1, 1, 1, 1]));
 tourismEvents.push(new Event("RT19", "Global markets fall", [-0.06, -0.04, -0.04, -0.04, -0.04, -0.04, 0], [-1, -1, -1, 0, 0, -1, 0]));
-tourismEvents.push(new Event("RT20", "Global markets crash,-0.06,-0.06,-0.06", [-0.06, -0.06, -0.06, 0], [-1, -1, -1, -1, -1, -1, -1]));
+tourismEvents.push(new Event("RT20", "Global markets crash", [-0.06, -0.06, -0.06, -0.06, -0.06, -0.06, 0], [-1, -1, -1, -1, -1, -1, -1]));
 tourismEvents.push(new Event("RT21", "Number of international flights increases", [0, 0, 0.04, 0.02, 0, 0.06, -0.04], [0, 0, 0, 0, 0, 1, 0]));
 tourismEvents.push(new Event("RT22", "Number of international flights decreases", [0, 0, -0.04, -0.02, 0, -0.06, 0.04], [0, 0, 0, 0, 0, -1, 0]));
 tourismEvents.push(new Event("RT23", "Local safety warnings", [0, 0, 0, 0, 0, -0.02, 0], [0, 0, 0, 0, 0, 0, 0]));
