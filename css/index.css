@@ -1,6 +1,8 @@
 .button {
+solid #756F6E 2px;
+color: black;
 width: 10.8%;
 height:50px;
-font-size: 13px;
+font-size: 13.5px;
 font-weight: bold;
 }

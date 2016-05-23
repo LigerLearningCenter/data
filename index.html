@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <!-- libraries //-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -15,6 +16,7 @@
     <script src="js/sectors/tourism.js"></script>
     <script src="js/sectors/infrastructure.js"></script>
 </head>
+
 <body>
     <button class="button" id="all">All Events</button>
     <button class="button" id="industry">Industry</button>
@@ -24,37 +26,41 @@
     <button class="button" id="education">Education</button>
     <button class="button" id="tourism">Tourism</button>
     <button class="button" id="ecology">Ecology</button>
-    <button class="button">Random Event</button>
+    <button class="button" id="randomEvent">Random Event</button>
 
     <script type="text/javascript">
-    function displayEventsTable() {
-      var buttonId = $(this).attr("id");
-      var arrayOfEvents = events[buttonId];
+        function displayEventsTable() {
+            var buttonId = $(this).attr("id");
+            var arrayOfEvents = events[buttonId];
+            if(buttonId=="randomEvent"){
+              arrayOfEvents = randEvent;
+            }
 
-      $("#eventsTable").remove()
-      var eventsTable = tableFromEvents(arrayOfEvents);
-      $("body").append(eventsTable);
-    }
+            $("#eventsTable").remove()
+            var eventsTable = tableFromEvents(arrayOfEvents);
+            $("body").append(eventsTable);
+        }
+
     </script>
     <script type="text/javascript">
         function flatten(dictionary) {
             var result = []
             for (key in dictionary) {
-              result.push(dictionary[key]);
+                result.push(dictionary[key]);
             }
-            return result
+            return result;
         }
 
         function tableRowFromEvent(event) {
             return "<tr><td>"
-                + event.id
-                + "</td><td>"
-                + event.description
-                + "</td><td>"
-                + flatten(event.money)
-                + "</td><td>"
-                + flatten(event.mood)
-                + "</td></tr>";
+            + event.id
+            + "</td><td>"
+            + event.description
+            + "</td><td>"
+            + flatten(event.money)
+            + "</td><td>"
+            + flatten(event.mood)
+            + "</td></tr>";
         }
 
         function tableHeaderFromTitles(columnTitles) {
@@ -73,24 +79,31 @@
             return table;
         }
 
-        var allEvents = [].concat(industryEvents,agricultureEvents,consumerServicesEvents,infrastructureEvents,tourismEvents,educationEvents,ecologyEvents)
+        var allEvents = [].concat(industryEvents, agricultureEvents, consumerServicesEvents, infrastructureEvents, tourismEvents, educationEvents, ecologyEvents)
+        var randEvent = [];
+        function getRandomEvent(allEvents) {
+            return allEvents[Math.floor(Math.random() * allEvents.length)]
+        }
+        randEvent[0] = getRandomEvent(allEvents);
 
         var events = {
-          "all" : allEvents,
-          "industry" : industryEvents,
-          "agriculture" : agricultureEvents,
-          "consumerServices" : consumerServicesEvents,
-          "infrastructure" : infrastructureEvents,
-          "education" : educationEvents,
-          "tourism" : tourismEvents,
-          "ecology" : ecologyEvents
+            "all": allEvents,
+            "industry": industryEvents,
+            "agriculture": agricultureEvents,
+            "consumerServices": consumerServicesEvents,
+            "infrastructure": infrastructureEvents,
+            "education": educationEvents,
+            "tourism": tourismEvents,
+            "ecology": ecologyEvents
         };
-        $(document).ready(function() {
-          var eventsTable = tableFromEvents(allEvents);
-          $("body").append(eventsTable);
 
-          $("#all, #industry, #agriculture, #consumerServices, #infrastructure, #education, #tourism, #ecology").bind("click", displayEventsTable);
+        $(document).ready(function() {
+            var eventsTable = tableFromEvents(allEvents);
+            $("body").append(eventsTable);
+
+            $("#all, #industry, #agriculture, #consumerServices, #infrastructure, #education, #tourism, #ecology, #randomEvent").bind("click", displayEventsTable);
         });
     </script>
 </body>
+
 </html>
