@@ -29,18 +29,21 @@
     <button class="button" id="randomEvent">Random Event</button>
 
     <script type="text/javascript">
-        function displayEventsTable() {
-            var buttonId = $(this).attr("id");
-            var arrayOfEvents = events[buttonId];
-            if(buttonId=="randomEvent"){
-              arrayOfEvents = randEvent;
+        function arrayOfEvents(buttonId) {
+            if (buttonId === "randomEvent") {
+                return getRandomEvents(allEvents, 105);
+            } else {
+                return events[buttonId];
             }
-
-            $("#eventsTable").remove()
-            var eventsTable = tableFromEvents(arrayOfEvents);
-            $("body").append(eventsTable);
         }
 
+        function displayEventsTable() {
+            var buttonId = $(this).attr("id");
+
+            $("#eventsTable").remove()
+            var eventsTable = tableFromEvents(arrayOfEvents(buttonId));
+            $("body").append(eventsTable);
+        }
     </script>
     <script type="text/javascript">
         function flatten(dictionary) {
@@ -52,15 +55,7 @@
         }
 
         function tableRowFromEvent(event) {
-            return "<tr><td>"
-            + event.id
-            + "</td><td>"
-            + event.description
-            + "</td><td>"
-            + flatten(event.money)
-            + "</td><td>"
-            + flatten(event.mood)
-            + "</td></tr>";
+            return "<tr><td>" + event.id + "</td><td>" + event.description + "</td><td>" + flatten(event.money) + "</td><td>" + flatten(event.mood) + "</td></tr>";
         }
 
         function tableHeaderFromTitles(columnTitles) {
@@ -80,11 +75,22 @@
         }
 
         var allEvents = [].concat(industryEvents, agricultureEvents, consumerServicesEvents, infrastructureEvents, tourismEvents, educationEvents, ecologyEvents)
-        var randEvent = [];
+
         function getRandomEvent(allEvents) {
             return allEvents[Math.floor(Math.random() * allEvents.length)]
         }
-        randEvent[0] = getRandomEvent(allEvents);
+
+        function getRandomEvents(allEvents, numberOfEvents) {
+            var result = [];
+            for (var i = 0; i < numberOfEvents; i++) {
+                result.push(getRandomEvent(allEvents));
+            }
+            return result;
+        }
+
+        function getUniqueRandomEvents(allEvents, numberOfEvents) {
+          // ?
+        }
 
         var events = {
             "all": allEvents,
