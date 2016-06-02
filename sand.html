@@ -6,19 +6,36 @@
     var height = 250;
 
     var sand = [];
+    var heights = [];
+
+    for (var i = 0; i < width; i++) {
+      heights[i] = 0;
+    }
 
     function refresh() {
       var ctx = document.getElementById("canvas").getContext("2d");
       var imageData = ctx.getImageData(0, 0, width, height);
       var data = imageData.data;
 
-      for (var i = 0; i < sand.length; i++) {
+      for (var i = sand.length - 1; i >= 0; i--) {
           var particle = sand[i];
           var x = particle[0];
           var y = particle[1];
+          var active = particle[2];
 
           var index = x + y * width;
           var index2 = x + (y + 1) * width;
+
+          if (!active) {
+            continue;
+          }
+
+          if (y == height - 1) {
+            heights[x] += 1;
+            sand[i][2] = false;
+            continue;
+          }
+
 
             data[4 * index] = 255.0;
             data[4 * index + 1] = 255.0;
@@ -33,8 +50,14 @@
           sand[i][1] = sand[i][1] + 1;
       }
 
-
       ctx.putImageData(imageData, 0, 0);
+
+      for (var i = 0; i < width; i++) {
+        ctx.moveTo(i, height - 1);
+        ctx.lineTo(i, height - 1 - heights[i]);
+        ctx.stroke();
+      }
+
       window.requestAnimationFrame(refresh);
     }
 
@@ -54,8 +77,8 @@
           return;
         }
 
-        var tx = evt.clientX;
-        var ty = evt.clientY;
+        var tx = Math.floor(evt.clientX);
+        var ty = Math.floor(evt.clientY);
 
           var ctx = document.getElementById("canvas").getContext("2d");
           var imageData = ctx.getImageData(0, 0, width, height);
@@ -66,7 +89,7 @@
                   var index = x + y * width;
 
                   if (Math.random() < 0.2) {
-                    sand.push([x, y]);
+                    sand.push([x, y, true]);
 
                     data[4 * index + 0] = 255; //red
                     data[4 * index + 1] = 0; // green
@@ -87,6 +110,6 @@
   </script>
 </head>
 <body>
-  <canvas id="canvas" width="500" height="250" style="border:1px solid #000000; transform: scale(4, 4); -webkit-filter: blur(0);"></canvas>
+  <canvas id="canvas" width="500" height="250" style="border:1px solid #000000;"></canvas>
 </body>
 </html>
