@@ -1,0 +1,92 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    var width = 500;
+    var height = 250;
+
+    var sand = [];
+
+    function refresh() {
+      var ctx = document.getElementById("canvas").getContext("2d");
+      var imageData = ctx.getImageData(0, 0, width, height);
+      var data = imageData.data;
+
+      for (var i = 0; i < sand.length; i++) {
+          var particle = sand[i];
+          var x = particle[0];
+          var y = particle[1];
+
+          var index = x + y * width;
+          var index2 = x + (y + 1) * width;
+
+            data[4 * index] = 255.0;
+            data[4 * index + 1] = 255.0;
+            data[4 * index + 2] = 255.0;
+            data[4 * index + 3] = 255.0;
+
+            data[4 * index2] = 255.0;
+            data[4 * index2 + 1] = 0.0;
+            data[4 * index2 + 2] = 0.0;
+            data[4 * index2 + 3] = 255.0;
+
+          sand[i][1] = sand[i][1] + 1;
+      }
+
+
+      ctx.putImageData(imageData, 0, 0);
+      window.requestAnimationFrame(refresh);
+    }
+
+    $(document).ready(function() {
+      var isDown = false;
+      // refresh();
+      $("#canvas").bind("mousedown", function(evt) {
+        isDown = true;
+      });
+
+      $("#canvas").bind("mouseup", function(evt) {
+        isDown = false;
+      });
+
+      $("#canvas").bind("mousemove", function(evt) {
+        if (!isDown) {
+          return;
+        }
+
+        var tx = evt.clientX;
+        var ty = evt.clientY;
+
+          var ctx = document.getElementById("canvas").getContext("2d");
+          var imageData = ctx.getImageData(0, 0, width, height);
+          var data = imageData.data;
+
+            for (var y = ty - 5; y < ty + 5; y++) {
+              for (var x = tx - 5; x < tx + 5; x++) {
+                  var index = x + y * width;
+
+                  if (Math.random() < 0.2) {
+                    sand.push([x, y]);
+
+                    data[4 * index + 0] = 255; //red
+                    data[4 * index + 1] = 0; // green
+                    data[4 * index + 2] = 0;
+                    data[4 * index + 3] = 255; //alpha
+
+                  }
+
+              }
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+
+      });
+
+      window.requestAnimationFrame(refresh);
+    });
+  </script>
+</head>
+<body>
+  <canvas id="canvas" width="500" height="250" style="border:1px solid #000000; transform: scale(4, 4); -webkit-filter: blur(0);"></canvas>
+</body>
+</html>
